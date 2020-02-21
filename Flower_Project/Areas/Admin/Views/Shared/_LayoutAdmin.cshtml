@@ -5,7 +5,7 @@
     <!-- Basic -->
     <meta charset="UTF-8">
 
-    <title>Dashboard | JSOFT Themes | JSOFT-Admin</title>
+    <title>Admin Page</title>
     <meta name="keywords" content="HTML5 Admin Template" />
     <meta name="description" content="JSOFT Admin - Responsive HTML5 Template">
     <meta name="author" content="JSOFT.net">
@@ -237,7 +237,7 @@
                             <img src="~/Areas/Admin/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                         </figure>
                         <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
-                            <span class="name">John Doe Junior</span>
+                            <span class="name">@ViewBag.GetName</span>
                             <span class="role">administrator</span>
                         </div>
 
@@ -330,16 +330,30 @@
                                         <span>Manager</span>
                                     </a>
                                     <ul class="nav nav-children">
+                                        
+                                        <li class="nav-parent">
+                                            <a>Categories</a>
+                                            <ul class="nav nav-children">
+
+                                                <li>
+                                                    @Html.ActionLink("List Category", "Index", "Categories")
+                                                </li>
+                                                <li>
+                                                    @Html.ActionLink("Add Category", "Create", "Categories")
+                                                </li>
+
+                                            </ul>
+                                        </li>
 
                                         <li class="nav-parent">
                                             <a>Product</a>
                                             <ul class="nav nav-children">
 
                                                 <li>
-                                                    <a>List Product</a>
+                                                    @Html.ActionLink("List Product", "Index", "Products")
                                                 </li>
                                                 <li>
-                                                    <a>Add Product</a>
+                                                    @Html.ActionLink("Add Product", "Create", "Products")
                                                 </li>
 
                                             </ul>
@@ -358,14 +372,27 @@
                                             </ul>
                                         </li>
                                         <li class="nav-parent">
-                                            <a>Member</a>
+                                            <a>User</a>
                                             <ul class="nav nav-children">
 
                                                 <li>
-                                                    <a>List Member</a>
+                                                    <a>List User</a>
                                                 </li>
                                                 <li>
-                                                    <a>Add Member</a>
+                                                    @Html.ActionLink("Add User", "Register", "Users")
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="nav-parent">
+                                            <a>Roles</a>
+                                            <ul class="nav nav-children">
+
+                                                <li>
+                                                    <a>List Role</a>
+                                                </li>
+                                                <li>
+                                                    @Html.ActionLink("Add Role", "CreateRole", "Roles")
                                                 </li>
 
                                             </ul>
@@ -545,15 +572,6 @@
     <script src="~/Areas/Admin/assets/vendor/gauge/gauge.js"></script>
     <script src="~/Areas/Admin/assets/vendor/snap-svg/snap.svg.js"></script>
     <script src="~/Areas/Admin/assets/vendor/liquid-meter/liquid.meter.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/jquery.vmap.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/data/jquery.vmap.sampledata.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/maps/continents/jquery.vmap.africa.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/maps/continents/jquery.vmap.australia.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/maps/continents/jquery.vmap.europe.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js"></script>
-    <script src="~/Areas/Admin/assets/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js"></script>
 
     <!-- Theme Base, Components and Settings -->
     <script src="~/Areas/Admin/assets/javascripts/theme.js"></script>
