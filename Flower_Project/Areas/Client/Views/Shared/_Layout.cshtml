@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @RenderSection("Css", required: false)
+</head>
+<body>
+    <div class="head">
+        <div class="container nav">
+            <div class="rozy-logo">
+                <a href="">
+                    <img src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2018/10/logo-default.png" alt="" />
+                </a>
+            </div>
+            <div class="menu-icon">
+                <ul class="nav nav-menu" id="menu">
+                    <li>
+                        <a href=""><b>Home</b></a>
+                    </li>
+                    <li>
+                        <a href=""><b>Products</b></a>
+                    </li>
+                    <li>
+                        <a href=""><b>Shop</b></a>
+                    </li>
+                    <li>
+                        <a href=""><b>Blog</b></a>
+                    </li>
+                    <li>
+                        <a href=""><b>Contact</b></a>
+                    </li>
+                    <li class="cart" style="font-size:medium">
+                        <a href="#" class="cart"><span></span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    @RenderBody()
+    <hr />
+    <div class="support-by-email container">
+        <form action="/" method="post">
+            <div class="row">
+                <div class="col-6 text-center">
+                    <h4 style="padding-top:20px">Sign Up For Newsletter</h4>
+                </div>
+                <div class="col-6 text-center">
+                    <p>
+                        <input style="float:left" type="email" class="form-control" name="email" placeholder="Enter Your Email" value="" />
+                        <button style="float:left" type="button" class="btn btn-danger">Success</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <hr />
+    <footer class="footer-flower" style="padding-top:0px">
+        <div class="container footer-2" style="background-color:#f5ebeb; padding-top:20px;padding-bottom:20px;">
+            <div class="row">
+                <div class="col-5 logo-footer">
+                    <a href="">
+                        <img src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2018/08/logo-footer.png" alt="" />
+                    </a>
+                    <p style="text-align:justify">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    </p>
+                </div>
+                <div class="time-open-lose col-4">
+                    <h4>
+                        THỜI GIAN MỞ CỬA
+                    </h4>
+                    <hr />
+                    <b>
+                        6h sáng – 22h tối
+                    </b>
+                </div>
+                <div class="col-3 contact">
+                    <h4 class="mt-lg-0 mt-sm-4">Liên Hệ</h4>
+                    <p>Số 8 Tôn Thất Thuyết!</p>
+                    <p class="mb-0"><i class="fa fa-phone-square" style="padding-right:5px;" aria-hidden="true"></i>0866017695</p>
+                    <p><i class="fa fa-envelope" style="padding-right:5px;" aria-hidden="true"></i>rozy@gmail.com</p>
+                </div>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </div>
+
+        </div>
+    </footer>
+    @section scripts {
+
+        <script type="text/javascript">
+
+            const activeImage = document.querySelector(".product-image .active");
+            const productImages = document.querySelectorAll(".image-list img");
+            const navItem = document.querySelector('a.toggle-nav');
+
+            function changeImage(e) {
+                activeImage.src = e.target.src;
+            }
+
+            function toggleNavigation() {
+                this.nextElementSibling.classList.toggle('active');
+            }
+
+            productImages.forEach(image => image.addEventListener("click", changeImage));
+            navItem.addEventListener('click', toggleNavigation);
+
+        </script>
+
+    }
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
