@@ -1,24 +1,151 @@
-﻿body {
-    padding-top: 50px;
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
+
+.h33 {
+    color: red;
+}
+
+.banner-main {
+    background-image: url("https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2018/10/slide1.jpg");
+    height: 100%;
+    width: 100%;
+}
+
+.item-nav-top-products a {
+    margin: 20px;
+    color: black;
+}
+
+    .item-nav-top-products a:hover {
+        color: red;
+    }
+
+.example1 {
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.head {
+    background-color: #666;
+}
+
+.rozy-logo {
+    padding-top: 20px;
     padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.mega-menu li {
+    display: inline-block;
+    float: left;
+    font-size: 0.94rem;
+    padding: 3px 0px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.nav-menu li {
+    padding-top: 25px;
+    margin-left: 35px;
+    font-size: 20px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+    .nav-menu li a {
+        color: white;
+    }
+
+.menu-icon {
+    padding-left: 200px;
 }
+
+.mega-menu-column ul li a {
+    color: black;
+}
+
+.cart-identity {
+    float: right;
+    margin-right: 10px;
+}
+
+    .cart-identity li a {
+        color: white;
+        margin-left: 10px;
+    }
+
+.identity {
+    padding-left: 100px;
+    padding-top: 28px;
+}
+
+.footer-flower {
+    background-color: #f5ebeb;
+}
+
+.banner {
+    background-image: url("https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2018/10/slide1.jpg");
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: inherit;
+}
+
+a.cart {
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 36px;
+    -webkit-border-radius: 36px;
+    border-radius: 36px;
+    font-size: 18px;
+    text-align: center;
+    color: #616161;
+    text-decoration: none;
+    position: absolute;
+    right: 24px;
+    top: 15px;
+    display: block;
+    background: #535558 url(http://images.vfl.ru/ii/1484930184/14435803/15757225.png ) center no-repeat;
+    background-size: 36px;
+    box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
+    -moz-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
+    -webkit-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
+}
+
+    a.cart > span {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 24px;
+        position: absolute;
+        -moz-border-radius: 12px;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        display: block;
+        transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #ffab00;
+        box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16), 0 3px 6px rgba(255, 171, 0, 0.23);
+        -moz-box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16), 0 3px 6px rgba(255, 171, 0, 0.23);
+        -webkit-box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16), 0 3px 6px rgba(255, 171, 0, 0.23);
+    }
+
+        a.cart > span.counter {
+            left: 48px;
+            bottom: 48px;
+            -webkit-transition: .2s linear;
+            -moz-transition: .2s linear;
+            -ms-transition: .2s linear;
+            -o-transition: .2s linear;
+            transition: .2s linear;
+            transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+        }
