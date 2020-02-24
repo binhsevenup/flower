@@ -19,6 +19,8 @@ namespace Flower_Project.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Flower_Project.Areas.Admin.Models.Member> Members { get; set; }
+        public System.Data.Entity.DbSet<Flower_Project.Areas.Admin.Models.Product> Products { get; set; }
+
+        public System.Data.Entity.DbSet<Flower_Project.Areas.Admin.Models.Category> Categories { get; set; }
     }
 }
