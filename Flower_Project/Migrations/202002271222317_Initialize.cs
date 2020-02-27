@@ -3,7 +3,7 @@ namespace Flower_Project.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Authentication : DbMigration
+    public partial class Initialize : DbMigration
     {
         public override void Up()
         {
@@ -28,10 +28,9 @@ namespace Flower_Project.Migrations
                         ProductName = c.String(nullable: false),
                         Quantity = c.Int(nullable: false),
                         Price = c.Double(nullable: false),
-                        PriceSale = c.Double(),
+                        Avatar = c.String(nullable: false),
                         Description = c.String(nullable: false, maxLength: 300),
                         Detail = c.String(nullable: false, maxLength: 500),
-                        Bonus = c.String(maxLength: 300),
                         CategoryId = c.String(maxLength: 10),
                         CreatedAt = c.DateTime(nullable: false),
                         UpdatedAt = c.DateTime(),

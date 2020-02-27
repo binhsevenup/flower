@@ -7,13 +7,13 @@ namespace Flower_Project.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Authentication : IMigrationMetadata
+    public sealed partial class Initialize : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Authentication));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initialize));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002211311463_Authentication"; }
+            get { return "202002271222317_Initialize"; }
         }
         
         string IMigrationMetadata.Source

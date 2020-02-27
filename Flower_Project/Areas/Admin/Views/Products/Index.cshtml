@@ -56,16 +56,13 @@
             @Html.ActionLink("Giá (vnđ)", "Index", "Products", new { sortOrder = ViewBag.PriceSort, currentFilter = ViewBag.CurrentFilter }, null)
         </th>
         <th>
-            @Html.ActionLink("Giá đã giảm (vnđ)", "Index", "Products", new { sortOrder = ViewBag.PriceSaleSort, currentFilter = ViewBag.CurrentFilter }, null)
-        </th>
-        <th>
             Mô tả
         </th>
         <th>
             Chi tiết
         </th>
         <th>
-            Quà tặng
+           Ảnh
         </th>
         <th>
             @Html.ActionLink("Ngày thêm", "Index", "Products", new { sortOrder = ViewBag.CreatedSort, currentFilter = ViewBag.CurrentFilter }, null)
@@ -98,16 +95,13 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PriceSale)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Detail)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Bonus)
+                <img src="@item.Avatar" alt="Alternate Text" style="max-width: 50%; max-height: 50%" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreatedAt)
