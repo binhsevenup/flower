@@ -13,11 +13,15 @@ namespace Flower_Project.Areas.Client.Controllers
         {
             return View();
         }
-        public ActionResult ProductDetail()
+        public ActionResult Products()
         {
             return View();
         }
         public ActionResult Blog()
+        {
+            return View();
+        }
+        public ActionResult ProductDetail()
         {
             return View();
         }

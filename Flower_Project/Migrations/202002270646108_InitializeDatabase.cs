@@ -3,7 +3,7 @@ namespace Flower_Project.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Authentication : DbMigration
+    public partial class InitializeDatabase : DbMigration
     {
         public override void Up()
         {

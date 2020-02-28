@@ -8,7 +8,14 @@
     <link href="~/Content/Site.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    @RenderSection("Css", required: false)
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+    </style>
 </head>
 <body>
     <div class="head">
@@ -24,7 +31,7 @@
                         <a href=""><b>Home</b></a>
                     </li>
                     <li>
-                        <a href=""><b>Products</b></a>
+                        <a href="~/Client/Home/Products"><b>Products</b></a>
                     </li>
                     <li>
                         <a href=""><b>Shop</b></a>
@@ -38,6 +45,7 @@
                     <li class="cart" style="font-size:medium">
                         <a href="#" class="cart"><span></span></a>
                     </li>
+                    @Html.Partial("_LoginPartial")
                 </ul>
             </div>
 
@@ -111,9 +119,12 @@
             productImages.forEach(image => image.addEventListener("click", changeImage));
             navItem.addEventListener('click', toggleNavigation);
 
+            
+
         </script>
 
     }
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

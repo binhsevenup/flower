@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Flower_Project.Areas.Admin.Models
 {
@@ -29,6 +30,7 @@ namespace Flower_Project.Areas.Admin.Models
         [Display(Name = "Mô tả sản phẩm")]
         [Required(ErrorMessage = "Vui lòng nhập mô tả cho sản phẩm. ")]
         [StringLength(300, MinimumLength = 2, ErrorMessage = "Mô tả cho sản phẩm chỉ được phép trong khoảng từ 2 - 300 kí tự.")]
+        [AllowHtml]
         public string Description { get; set; }
         [Display(Name = "Chi tiết sản phẩm")]
         [Required(ErrorMessage = "Vui lòng nhập mô tả chi tiết cho sản phẩm. ")]

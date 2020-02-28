@@ -134,6 +134,7 @@ namespace Flower_Project.Areas.Admin.Controllers
         }
 
         // GET: Admin/Products/Create
+        [ValidateInput(false)]
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName");
