@@ -14,6 +14,9 @@ namespace Flower_Project
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/ckeditor").Include(
+                        "~/Scripts/ckeditor/ckeditor.js*"));
+
             bundles.Add(new ScriptBundle("~/bundles/cloudinary").Include(
                 "~/Scripts/cloudinary-global.js"
                 , "~/Scripts/index.js"

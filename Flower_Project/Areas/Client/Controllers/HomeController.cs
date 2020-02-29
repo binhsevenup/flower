@@ -21,5 +21,10 @@ namespace Flower_Project.Areas.Client.Controllers
         {
             return View();
         }
+        public ActionResult Products()
+        {
+            return View();
+        }
+
     }
 }
