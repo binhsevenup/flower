@@ -2041,6 +2041,7 @@
     <Content Include="Areas\Client\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Client\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Client\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Client\Views\Home\Blog.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Roles\Create.cshtml" />
