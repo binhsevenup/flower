@@ -149,3 +149,127 @@ a.cart {
             -moz-transform: scale(1);
             -webkit-transform: scale(1);
         }
+#custom-search-input {
+    /* padding: 3px; */
+    border: solid 1px #E4E4E4;
+    /* border-radius: 6px; */
+    background-color: #fff;
+}
+
+#custom-search-input input {
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button {
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #000000;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover {
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search {
+    font-size: 19px;
+}
+.card-img-top {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vert-align: middle;
+    border: 0;
+}
+.category-content {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 24px;
+}
+.blog-content {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #7d7d7d;
+    line-height: 28px;
+}
+.blog-content-btn {
+    font-size: 14px;
+    text-transform: inherit;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    position: relative;
+    padding: 0 20px;
+    display: inline-block;
+    background-color: #941250;
+    border-radius: 3px;
+}
+.blog-card {
+    position: relative;
+    padding-right: 50px;
+}
+.popular-tag {
+    padding-right: 50px;
+    position: relative;
+}
+.tag-cloud-link {
+    display: inline-block;
+    color: #555;
+    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 6px 9px;
+    margin: 6px 4px;
+    font-size: 13px !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin-top: 30px;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+    ul.pagination li a.active {
+        background-color: #941250;
+        ;
+        color: white;
+        border: 1px solid #941250;
+        ;
+    }
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+div.center {
+    text-align: center;
+}
