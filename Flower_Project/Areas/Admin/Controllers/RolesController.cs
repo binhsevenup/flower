@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,6 +23,12 @@ namespace Flower_Project.Areas.Admin.Controllers
         }
         // GET: Admin/Roles
 
+        public ActionResult Index()
+        {
+            return View(dbContext.IdentityRoles.ToList());
+        }
+
+
 
         public ActionResult CreateRole()
         {
@@ -29,19 +36,42 @@ namespace Flower_Project.Areas.Admin.Controllers
         }
 
 
-        [HttpPost]
-        public ActionResult ProcessCreateRole(string roleName, string description)
+        public ActionResult Create()
         {
-            var role = new Role()
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ProcessCreateRole(RoleClass roleClass)
+        {
+            if (ModelState.IsValid)
             {
-                Name = roleName,
-                Description = description,
-                CreatedAt = DateTime.Now,
-                Status = Role.RoleStatus.Active
-            };
-            var result = _roleManager.Create(role);
-            ViewBag.Result = result;
-            return Redirect("/Admin/Admin");
+                var role = new Role
+                {
+                    Name = roleClass.Name, Description = roleClass.Description, CreatedAt = DateTime.Now,
+                    UpdatedAt = roleClass.UpdatedAt, DeletedAt = roleClass.DeletedAt, Status = Role.RoleStatus.Active
+                };
+                var result = _roleManager.Create(role);
+                if (result.Succeeded)
+                {
+                    ViewBag.Result = result;
+                    return Redirect("/Admin/Admin");
+
+                }
+
+            }
+
+            return View("Create");
+
+            
+
+            
+
+
+
+
         }
     }
 }

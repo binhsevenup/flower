@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
 
     <title>Admin Page</title>
+    @Scripts.Render("~/bundles/ckeditor");
     <meta name="keywords" content="HTML5 Admin Template" />
     <meta name="description" content="JSOFT Admin - Responsive HTML5 Template">
     <meta name="author" content="JSOFT.net">
@@ -38,6 +39,7 @@
 
     <!-- Head Libs -->
     <script src="~/Areas/Admin/assets/vendor/modernizr/modernizr.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
 
 </head>
 <body>
@@ -296,133 +298,155 @@
                                 </li>
 
 
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-columns" aria-hidden="true"></i>
+                                        <span>Quản lý sản phẩm</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            @Html.ActionLink("+ Danh sách sản phẩm", "Index", "Products")
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("+ Thêm sản phẩm", "Create", "Products")
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-columns" aria-hidden="true"></i>
+                                        <span>Quảnh lý người dùng</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            @Html.ActionLink("+ Danh sách người dùng", "Index", "Users")
+
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("+ Thêm người dùng", "Create", "Users")
+
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-columns" aria-hidden="true"></i>
+                                        <span>Quản lý quyền hạn</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            @Html.ActionLink("+ Danh sách quyền", "Index", "Roles")
+
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("+ Thêm quyền", "Create", "Roles")
+
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+
                                 @* <li class="nav-parent"> *@
                                 @*     <a> *@
-                                @*         <i class="fa fa-columns" aria-hidden="true"></i> *@
-                                @*         <span>Layouts</span> *@
+                                @*         <i class="fa fa-align-left" aria-hidden="true"></i> *@
+                                @*         <span>Manager</span> *@
                                 @*     </a> *@
                                 @*     <ul class="nav nav-children"> *@
-                                @*         <li> *@
-                                @*             <a href="layouts-default.html"> *@
-                                @*                 Default *@
-                                @*             </a> *@
+                                @* *@
+                                @*         <li class="nav-parent"> *@
+                                @*             <a>Categories</a> *@
+                                @*             <ul class="nav nav-children"> *@
+                                @* *@
+                                @*                 <li> *@
+                                @*                     @Html.ActionLink("List Category", "Index", "Categories") *@
+                                @*                 </li> *@
+                                @*                 <li> *@
+                                @*                     @Html.ActionLink("Add Category", "Create", "Categories") *@
+                                @*                 </li> *@
+                                @* *@
+                                @*             </ul> *@
                                 @*         </li> *@
-                                @*         <li> *@
-                                @*             <a href="layouts-boxed.html"> *@
-                                @*                 Boxed *@
-                                @*             </a> *@
+                                @* *@
+                                @*         <li class="nav-parent"> *@
+                                @*             <a>Product</a> *@
+                                @*             <ul class="nav nav-children"> *@
+                                @* *@
+                                @*                 <li> *@
+                                @*                     @Html.ActionLink("List Product", "Index", "Products") *@
+                                @*                 </li> *@
+                                @*                 <li> *@
+                                @*                     @Html.ActionLink("Add Product", "Create", "Products") *@
+                                @*                 </li> *@
+                                @* *@
+                                @*             </ul> *@
                                 @*         </li> *@
-                                @*         <li> *@
-                                @*             <a href="layouts-menu-collapsed.html"> *@
-                                @*                 Menu Collapsed *@
-                                @*             </a> *@
+                                @*         <li class="nav-parent"> *@
+                                @*             <a>Order</a> *@
+                                @*             <ul class="nav nav-children"> *@
+                                @* *@
+                                @*                 <li> *@
+                                @*                     <a>List Order</a> *@
+                                @*                 </li> *@
+                                @*                 <li> *@
+                                @*                     <a>Add Order</a> *@
+                                @*                 </li> *@
+                                @* *@
+                                @*             </ul> *@
                                 @*         </li> *@
-                                @*         <li> *@
-                                @*             <a href="layouts-scroll.html"> *@
-                                @*                 Scroll *@
-                                @*             </a> *@
+                                @*         <li class="nav-parent"> *@
+                                @*             <a>User</a> *@
+                                @*             <ul class="nav nav-children"> *@
+                                @* *@
+                                @*                 <li> *@
+                                @*                     <a>List User</a> *@
+                                @*                 </li> *@
+                                @*                 <li> *@
+                                @*                     @Html.ActionLink("Add User", "Create", "Users") *@
+                                @*                 </li> *@
+                                @* *@
+                                @*             </ul> *@
+                                @*         </li> *@
+                                @*         <li class="nav-parent"> *@
+                                @*             <a>Roles</a> *@
+                                @*             <ul class="nav nav-children"> *@
+                                @* *@
+                                @*                 <li> *@
+                                @*                     <a>List Role</a> *@
+                                @*                 </li> *@
+                                @*                 <li> *@
+                                @*                     @Html.ActionLink("Add Role", "CreateRole", "Roles") *@
+                                @*                 </li> *@
+                                @* *@
+                                @*             </ul> *@
                                 @*         </li> *@
                                 @*     </ul> *@
                                 @* </li> *@
-                                <li class="nav-parent">
-                                    <a>
-                                        <i class="fa fa-align-left" aria-hidden="true"></i>
-                                        <span>Manager</span>
-                                    </a>
-                                    <ul class="nav nav-children">
-                                        
-                                        <li class="nav-parent">
-                                            <a>Categories</a>
-                                            <ul class="nav nav-children">
 
-                                                <li>
-                                                    @Html.ActionLink("List Category", "Index", "Categories")
-                                                </li>
-                                                <li>
-                                                    @Html.ActionLink("Add Category", "Create", "Categories")
-                                                </li>
-
-                                            </ul>
-                                        </li>
-
-                                        <li class="nav-parent">
-                                            <a>Product</a>
-                                            <ul class="nav nav-children">
-
-                                                <li>
-                                                    @Html.ActionLink("List Product", "Index", "Products")
-                                                </li>
-                                                <li>
-                                                    @Html.ActionLink("Add Product", "Create", "Products")
-                                                </li>
-
-                                            </ul>
-                                        </li>
-                                        <li class="nav-parent">
-                                            <a>Order</a>
-                                            <ul class="nav nav-children">
-
-                                                <li>
-                                                    <a>List Order</a>
-                                                </li>
-                                                <li>
-                                                    <a>Add Order</a>
-                                                </li>
-
-                                            </ul>
-                                        </li>
-                                        <li class="nav-parent">
-                                            <a>User</a>
-                                            <ul class="nav nav-children">
-
-                                                <li>
-                                                    <a>List User</a>
-                                                </li>
-                                                <li>
-                                                    @Html.ActionLink("Add User", "Register", "Users")
-                                                </li>
-
-                                            </ul>
-                                        </li>
-                                        <li class="nav-parent">
-                                            <a>Roles</a>
-                                            <ul class="nav nav-children">
-
-                                                <li>
-                                                    <a>List Role</a>
-                                                </li>
-                                                <li>
-                                                    @Html.ActionLink("Add Role", "CreateRole", "Roles")
-                                                </li>
-
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="http://themeforest.net/item/JSOFT-responsive-html5-template/4106987?ref=JSOFT" target="_blank">
-                                        <i class="fa fa-external-link" aria-hidden="true"></i>
-                                        <span>Front-End <em class="not-included">(Not Included)</em></span>
-                                    </a>
-                                </li>
                             </ul>
                         </nav>
 
                         <hr class="separator" />
 
-                        <div class="sidebar-widget widget-tasks">
-                            <div class="widget-header">
-                                <h6>Projects</h6>
-                                <div class="widget-toggle">+</div>
-                            </div>
-                            <div class="widget-content">
-                                <ul class="list-unstyled m-none">
-                                    <li><a href="#">JSOFT HTML5 Template</a></li>
-                                    <li><a href="#">Tucson Template</a></li>
-                                    <li><a href="#">JSOFT Admin</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        @* <div class="sidebar-widget widget-tasks"> *@
+                        @*     <div class="widget-header"> *@
+                        @*         <h6>Projects</h6> *@
+                        @*         <div class="widget-toggle">+</div> *@
+                        @*     </div> *@
+                        @*     <div class="widget-content"> *@
+                        @*         <ul class="list-unstyled m-none"> *@
+                        @*             <li><a href="#">JSOFT HTML5 Template</a></li> *@
+                        @*             <li><a href="#">Tucson Template</a></li> *@
+                        @*             <li><a href="#">JSOFT Admin</a></li> *@
+                        @*         </ul> *@
+                        @*     </div> *@
+                        @* </div> *@
 
                         <hr class="separator" />
 
@@ -585,5 +609,8 @@
 
     <!-- Examples -->
     <script src="~/Areas/Admin/assets/javascripts/dashboard/examples.dashboard.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/cloudinary")
 </body>
 </html>

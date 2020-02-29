@@ -27,7 +27,7 @@ namespace Flower_Project.Areas.Admin.Controllers
             ViewBag.NameCategorySort = sortOrder == "NameCategory" ? "name_category_desc" : "NameCategory";
             ViewBag.QuantitySort = sortOrder == "Quantity" ? "quantity_desc" : "Quantity";
             ViewBag.PriceSort = sortOrder == "Price" ? "price_desc" : "Price";
-            ViewBag.PriceSaleSort = sortOrder == "PriceSale" ? "price_sale_desc" : "PriceSale";
+//            ViewBag.PriceSaleSort = sortOrder == "PriceSale" ? "price_sale_desc" : "PriceSale";
             ViewBag.CreatedSort = sortOrder == "Created" ? "created_desc" : "Created";
             ViewBag.UpdatedSort = sortOrder == "Updated" ? "updated_desc" : "Updated";
             ViewBag.StatusSort = sortOrder == "Status" ? "status_desc" : "Status";
@@ -81,12 +81,12 @@ namespace Flower_Project.Areas.Admin.Controllers
                 case "price_desc":
                     product = product.OrderByDescending(s => s.Price);
                     break;
-                case "PriceSale":
-                    product = product.OrderBy(s => s.PriceSale);
-                    break;
-                case "price_sale_desc":
-                    product = product.OrderByDescending(s => s.PriceSale);
-                    break;
+//                case "PriceSale":
+//                    product = product.OrderBy(s => s.PriceSale);
+//                    break;
+//                case "price_sale_desc":
+//                    product = product.OrderByDescending(s => s.PriceSale);
+//                    break;
                 case "Created":
                     product = product.OrderBy(s => s.CreatedAt);
                     break;
@@ -145,7 +145,8 @@ namespace Flower_Project.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductId,ProductName,Quantity,Price,PriceSale,Description,Detail,Bonus,CategoryId,CreatedAt,UpdatedAt,DeletedAt,Status")] Product product)
+
+        public ActionResult Create([Bind(Include = "ProductId,ProductName,Quantity,Price,Description,Detail,Avatar,CategoryId,CreatedAt,UpdatedAt,DeletedAt,Status")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -181,7 +182,7 @@ namespace Flower_Project.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductId,ProductName,Quantity,Price,PriceSale,Description,Detail,Bonus,CategoryId,CreatedAt,UpdatedAt,DeletedAt,Status")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductId,ProductName,Quantity,Price,Description,Detail,Avatar,CategoryId,CreatedAt,UpdatedAt,DeletedAt,Status")] Product product)
         {
             if (product == null || product.ProductId == null)
             {
@@ -202,10 +203,9 @@ namespace Flower_Project.Areas.Admin.Controllers
                 existProduct.ProductName = product.ProductName;
                 existProduct.Category = product.Category;
                 existProduct.CategoryId = product.CategoryId;
-                existProduct.Bonus = product.Bonus;
                 existProduct.Description = product.Description;
                 existProduct.Price = product.Price;
-                existProduct.PriceSale = product.PriceSale;
+                existProduct.Avatar = product.Avatar;
                 existProduct.Quantity = product.Quantity;
                 existProduct.Detail = product.Detail;
                 existProduct.UpdatedAt = DateTime.Now;
