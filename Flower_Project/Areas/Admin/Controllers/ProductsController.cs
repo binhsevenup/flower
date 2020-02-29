@@ -145,6 +145,7 @@ namespace Flower_Project.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public ActionResult Create([Bind(Include = "ProductId,ProductName,Quantity,Price,Description,Detail,Avatar,CategoryId,CreatedAt,UpdatedAt,DeletedAt,Status")] Product product)
         {
             if (ModelState.IsValid)
