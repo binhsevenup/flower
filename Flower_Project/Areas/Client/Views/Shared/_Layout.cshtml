@@ -27,19 +27,25 @@
             <div class="menu-icon">
                 <ul class="nav nav-menu" id="menu">
                     <li>
-                        <a href=""><b>Home</b></a>
+                        @Html.ActionLink("Home", "Index", "Home")
                     </li>
                     <li>
-                        <a href=""><b>Products</b></a>
+                        @Html.ActionLink("Product", "Products", "Home")
                     </li>
                     <li>
-                        <a href=""><b>Shop</b></a>
+                        @Html.ActionLink("Shop", "", "Home")
                     </li>
                     <li>
-                        <a href=""><b>Blog</b></a>
+                        @Html.ActionLink("Blog", "Blog", "Home")
                     </li>
                     <li>
-                        <a href=""><b>Contact</b></a>
+                        @Html.ActionLink("Contact", "", "Home")
+                    </li>
+                    <li >
+                        @Html.ActionLink("Register", "Register", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Login", "Login", "Home")
                     </li>
                     <li class="cart" style="font-size:medium">
                         <a href="#" class="cart"><span></span></a>
