@@ -1,6 +1,15 @@
-﻿
+﻿@using Flower_Project.Areas.Admin.Models
+@using Flower_Project.Utility
+@model IEnumerable<Flower_Project.Areas.Admin.Models.Product>
+
+
 @{
     ViewBag.Title = "Products";
+    var currentCategory = ViewData["category"] as Category;
+    if (currentCategory == null)
+    {
+        currentCategory = new Category();
+    }
 }
 
 <div class="container" style="padding-top:20px;padding-bottom:20px">
@@ -47,30 +56,37 @@
                     </header>
                     <div class="filter-content">
                         <div class="card-body">
-                            <div class="custom-control custom-checkbox">
+                            @* <div class="custom-control custom-checkbox"> *@
+                            @* *@
+                            @*     <input type="checkbox" class="custom-control-input" id="Check1"> *@
+                            @*     <label class="custom-control-label" for="Check1"> *@
+                            @*         Hoa Cưới *@
+                            @*     </label> *@
+                            @* </div> <!-- form-check.// --> *@
+                            @* *@
+                            @* <div class="custom-control custom-checkbox"> *@
+                            @* *@
+                            @*     <input type="checkbox" class="custom-control-input" id="Check2"> *@
+                            @*     <label class="custom-control-label" for="Check2"> *@
+                            @*         Hoa Sinh Nhật *@
+                            @*     </label> *@
+                            @* </div> <!-- form-check.// --> *@
+                            @foreach (var cate in CategoryUtility.GetCategories())
+                            {
+                                <div class="custom-control ">
 
-                                <input type="checkbox" class="custom-control-input" id="Check1">
-                                <label class="custom-control-label" for="Check1">
-                                    Hoa Cưới
-                                </label>
-                            </div> <!-- form-check.// -->
+                                    @* <input type="checkbox" class="custom-control-input" id="Check3"> *@
+                                    <label>
 
-                            <div class="custom-control custom-checkbox">
+                                        @Html.ActionLink(cate.CategoryName, "ByCategory", "Home", new
+                                        {
+                                            id = cate.CategoryId
+                                        }, null)
 
-                                <input type="checkbox" class="custom-control-input" id="Check2">
-                                <label class="custom-control-label" for="Check2">
-                                    Hoa Sinh Nhật
-                                </label>
-                            </div> <!-- form-check.// -->
+                                    </label>
 
-                            <div class="custom-control custom-checkbox">
-
-                                <input type="checkbox" class="custom-control-input" id="Check3">
-                                <label class="custom-control-label" for="Check3">
-                                    Hoa Valentine
-                                </label>
-                            </div> <!-- form-check.// -->
-
+                                </div> <!-- form-check.// -->
+                            }
                         </div> <!-- card-body.// -->
                     </div>
                 </article> <!-- card-group-item.// -->
@@ -81,120 +97,39 @@
                 <div class="banner-img-in-products">
                     <img src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2018/08/banner-shop.jpg" alt="Alternate Text" />
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-grid3">
-                        <div class="product-image3">
-                            <a href="#">
-                                <img class="pic-1" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/2.jpg">
-                                <img class="pic-2" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/4.jpg">
-                            </a>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                            <span class="product-new-label">New</span>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                            <div class="price">
-                                $63.50
 
-                            </div>
-                            <ul class="rating">
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star disable"></li>
-                                <li class="fa fa-star disable"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-grid3">
-                        <div class="product-image3">
-                            <a href="#">
-                                <img class="pic-1" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/2.jpg">
-                                <img class="pic-2" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/4.jpg">
-                            </a>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Women's Designer Top</a></h3>
-                            <div class="price">
-                                $43.50
-                            </div>
-                            <ul class="rating">
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-grid3">
-                        <div class="product-image3">
-                            <a href="#">
-                                <img class="pic-1" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/2.jpg">
-                                <img class="pic-2" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/4.jpg">
-                            </a>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                            <span class="product-new-label">New</span>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                            <div class="price">
-                                $63.50
-
-                            </div>
-                            <ul class="rating">
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star disable"></li>
-                                <li class="fa fa-star disable"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-grid3">
-                        <div class="product-image3">
-                            <a href="#">
-                                <img class="pic-1" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/2.jpg">
-                                <img class="pic-2" src="https://demo.wpthemego.com/themes/sw_rozy/wp-content/uploads/2016/10/4.jpg">
-                            </a>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                            <span class="product-new-label">New</span>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                            <div class="price">
-                                $63.50
-
-                            </div>
-                            <ul class="rating">
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star"></li>
-                                <li class="fa fa-star disable"></li>
-                                <li class="fa fa-star disable"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @foreach (var item in  Model)
+                {
+                   
+                    <div class="col-md-4 col-sm-6 mt-4  "> 
+                        <div class="product-grid3"> 
+                             <div class="product-image3"> 
+                                 <a href="#"> 
+                                     <img class="pic-1" style="max-height: 200px" src="@item.Avatar"> 
+                                    <img class="pic-2" src="@item.Avatar"> 
+                                </a> 
+                               <ul class="social"> 
+                                     <li><a href="#"><i class="fa fa-eye"></i></a></li> 
+                                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                                 </ul> 
+                                <span class="product-new-label">New</span> 
+                             </div> 
+                             <div class="product-content"> 
+                                <h3 class="title"><a href="#">@item.ProductName</a></h3> 
+                                 <div class="price"> 
+                                     @item.Price
+                                 </div> 
+                                <ul class="rating"> 
+                                     <li class="fa fa-star"></li> 
+                                    <li class="fa fa-star"></li> 
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star disable"></li> 
+                                    <li class="fa fa-star disable"></li> 
+                                 </ul> 
+                             </div> 
+                         </div> 
+                     </div> 
+                }
             </div>
         </div>
     </div>

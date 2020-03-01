@@ -206,6 +206,7 @@
     <Compile Include="Models\Flower_ProjectContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utility\CategoryUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\assets\ajax\ajax-treeview-nodes.html" />

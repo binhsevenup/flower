@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace Flower_Project.Areas.Admin.Models
 {
-    public class Category
+    public class Category : IEnumerable
     {
         [Key]
         [Display(Name = "Mã danh mục")]
@@ -34,6 +35,11 @@ namespace Flower_Project.Areas.Admin.Models
         public bool IsDeleted()
         {
             return this.Status == CategoryStatus.Deleted;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }
